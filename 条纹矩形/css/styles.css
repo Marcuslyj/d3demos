@@ -1,0 +1,440 @@
+/*@name: @description: 初始化样式@author: 冯盼盼*/
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+hr,
+input,
+legend,
+li,
+ol,
+p,
+pre,
+td,
+textarea,
+th,
+ul,
+body {
+	margin: 0;
+	padding: 0;
+	/*background-color: #e6e6e6;*/
+}
+
+body {
+	font-family: "Microsoft Yahei", "sans-serif";
+	/*font-size: 12px;*/
+	color: #000;
+	/*background-color: #fff;*/
+}
+
+ol,
+ul {
+	list-style: none;
+}
+
+a {
+	text-decoration: none;
+	cursor: pointer;
+}
+
+a:hover {
+	text-decoration: none;
+	color: #666;
+}
+
+fieldset,
+img,
+input {
+	border: 0;
+}
+
+.clearfix:after {
+	content: "";
+	height: 0;
+	line-height: 0;
+	display: block;
+	clear: both;
+	visibility: hidden;
+}
+
+.clearfix {
+	*zoom: 1;
+}
+
+.fl {
+	float: left;
+}
+
+.fr {
+	float: right;
+}
+
+.banxin {
+	width: 980px;
+	margin: 0 auto;
+}
+
+.m_r {
+	margin-right: 0.64rem;
+}
+
+.m_l {
+	margin-left: 0.64rem;
+}
+
+.m_t {
+	margin-top: 0.64rem;
+}
+
+.m_b {
+	margin-bottom: 0.384rem;
+}
+
+.b_r {
+	/*border-right: 1px solid #eaeaea;*/
+	border-right: 1px solid #fafafa;
+}
+
+.b_b {
+	border-bottom: .384rem solid #E7E7E7;
+}
+
+.b_b_10 {
+	border-bottom: .64rem solid #f2f3f5;
+}
+
+.b_t_10 {
+	border-top: .64rem solid #f2f3f5;
+}
+
+
+/*公共样式*/
+
+.credit {
+	min-width: 300px;
+}
+
+.cras-bg {
+	background-color: #fff;
+}
+
+.caption {
+	position: relative;
+	/*height: 35px;    line-height: 35px;    font-size: 15px;*/
+	/*height: 2.24rem;*/
+	line-height: 2.24rem;
+	font-size: 0.96rem;
+	color: #343434;
+	margin: 0 0 0 1.024rem;
+	/*padding-left: 0.768rem;*/
+	font-weight: 600;
+}
+
+.caption .mark {
+	position: absolute;
+	/*top: 10px;    left: -8px;    font-size: 10px;*/
+	top: 0.64rem;
+	left: -0.512rem;
+	font-size: 0.64rem;
+	font-weight: normal;
+	color: #fff;
+	/*width: 16px;    height: 16px;    line-height: 16px;*/
+	width: 1.024rem;
+	height: 1.024rem;
+	line-height: 1.024rem;
+	text-align: center;
+	-webkit-border-radius: 1.024rem;
+	-moz-border-radius: 1.024rem;
+	border-radius: 1.024rem;
+}
+
+.info {
+	width: 100%;
+	/*border-top: 1px solid #eaeaea;*/
+	border-top: 1px solid #fafafa;
+	text-align: center;
+}
+
+.info ul {
+	padding: 0;
+	margin: 0;
+}
+
+.info a:hover {
+	text-decoration: none;
+}
+
+.info .need-count {
+	position: relative;
+}
+
+.info a span:nth-child(1) {
+	/*font-size: 30px;*/
+	font-size: 1.92rem;
+}
+
+
+/*.caption .line {    position: absolute;    top: 11px;    left: 0;    width: 4px;    height: 14px;    border-radius: 4px;    top: 0.704rem;    left: 0;    width: 0.256rem;    height: 0.896rem;    border-radius: 0.256rem;    background: linear-gradient(to bottom, #2886ff, #06d1ff);}*/
+
+
+/*第二版（图标在左，字体在右）*/
+
+.info ul li {
+	width: 50%;
+	float: left;
+	/*line-height: 3.072rem;*/
+	line-height: 3.2rem;
+	/*border-bottom: 1px solid #eaeaea;*/
+	border-bottom: 1px solid #fafafa;
+}
+
+.info ul li a {
+	width: 100%;
+	display: block;
+	padding-right: 3.2rem;
+}
+
+.info ul li a p {
+	display: inline-block;
+	/*font-size: 14px;*/
+	font-size: 0.896rem;
+	color: #000;
+	vertical-align: middle;
+}
+
+.info span:nth-child(1) {
+	display: inline-block;
+	background: url("assets/images/spirites3.png") no-repeat;
+	background-size: 500px 400px;
+	width: 23px;
+	height: 23px;
+	/*margin: 12px auto;    margin-right: 10px;*/
+	margin: 0.768rem auto;
+	margin-right: 0.64rem;
+	vertical-align: middle;
+}
+
+.info .need-count .count {
+	position: absolute;
+	/*top: 18px;    right: 10px;*/
+	top: 1.152rem;
+	right: 0.64rem;
+	color: #000;
+	/*font-size: 12px;*/
+	font-size: 0.768rem;
+	margin: 0;
+	/*background-color: #e5e5e5;*/
+	/*height: 15px;    padding: 0 5px;    border-radius: 14px;*/
+	height: 0.96rem;
+	padding: 0 0.32rem;
+	border-radius: 0.896rem;
+	text-align: center;
+	/*line-height: 15px;*/
+	line-height: 0.96rem;
+	color: #8a8a8a;
+}
+
+
+/*公共隐藏元素类  */
+
+.cmb-hide {
+	display: none;
+}
+
+.display {
+	display: none;
+}
+
+.info .disabled {
+	pointer-events: none;
+	/*禁止点击*/
+}
+
+.info .disabled> p {
+	color: #8a8a8a;
+	/*图标灰显时，字体灰显类*/
+}
+
+
+/*第一版（图标在上，字体在下）*/
+
+
+/*.info ul li {    width: 25%;    float: left;    border-bottom: 1px solid #eaeaea;}
+.info ul li a {    width: 100%;    display: block;}
+.info ul li a p {    font-size: 14px;    color: #000;    margin: 0 0 10px 0;    line-height: initial;}
+.info span:nth-child(1) {    display: block;    background: url("assets/images/spirites.png") no-repeat;    background-size: 400px 200px;    width: 23px;    height: 23px;    margin: 17px auto 8px;}
+.info .need-count .count {    position: absolute;    top: 5px;    right: 5px;    color: #000;    font-size: 12px;    margin: 0;    background-color: #e5e5e5;    height: 15px;    padding: 0 5px;    border-radius: 14px;    text-align: center;    line-height: 15px;}*/
+
+
+/*适配ipad及其以上大屏设备*/
+
+
+/*第一版（图标在上，字体在下）*/
+
+
+/*@media (min-width:768px) {    html {        font-size: 640%;    }    .info span:nth-child(1) {        display: block;        background: url("assets/images/spirites.png") no-repeat;        background-size: 800px 400px;        width: 46px;        height: 46px;        margin: 17px auto 8px;    }}*/
+
+
+/*第二版（图标在左，字体在右）*/
+
+@media all and (min-width: 640px) {
+	.info span:nth-child(1) {
+		display: inline-block;
+		background: url("assets/images/spirites3.png") no-repeat;
+		background-size: 1000px 800px;
+		width: 46px;
+		height: 46px;
+		margin: .768rem auto;
+		margin-right: .64rem;
+		vertical-align: middle;
+	}
+}
+
+
+/* for 1080+px width screen */
+
+@media all and (min-width: 1080px) {
+	html,
+	body {
+		font-size: 51.67px;
+	}
+}
+
+
+/* for 1080px width screen */
+
+@media all and (max-width:1080px) {
+	html,
+	body {
+		font-size: 43px;
+	}
+}
+
+
+/* for 800px width screen */
+
+@media all and (max-width:800px) {
+	html,
+	body {
+		font-size: 33px;
+	}
+}
+
+
+/* for 720px width screen */
+
+@media all and (max-width:720px) {
+	html,
+	body {
+		font-size: 30px;
+	}
+}
+
+
+/* for 640px width screen */
+
+@media all and (max-width:640px) {
+	html,
+	body {
+		font-size: 27px;
+	}
+}
+
+
+/* for 540px width screen */
+
+@media all and (max-width:540px) {
+	html,
+	body {
+		font-size: 22.5px;
+	}
+}
+
+
+/* for 480px width screen */
+
+@media all and (max-width:480px) {
+	html,
+	body {
+		font-size: 20px;
+	}
+}
+
+
+/* for 450px width screen */
+
+@media all and (max-width:450px) {
+	html,
+	body {
+		font-size: 18.9px;
+	}
+}
+
+
+/* for 414px width screen */
+
+@media all and (max-width:414px) {
+	html,
+	body {
+		font-size: 17.25px;
+	}
+}
+
+
+/* for 400px width screen */
+
+@media all and (max-width:400px) {
+	html,
+	body {
+		font-size: 16.667px;
+	}
+}
+
+
+/* for 375px width screen */
+
+@media all and (max-width:375px) {
+	html,
+	body {
+		font-size: 15.625px;
+	}
+}
+
+
+/* for 360px width screen */
+
+@media all and (max-width:360px) {
+	html,
+	body {
+		font-size: 15px;
+	}
+}
+
+
+/* for 320px width screen */
+
+@media all and (max-width:320px) {
+	html,
+	body {
+		font-size: 13.5px;
+	}
+}
+
+body {
+	line-height: 1.344rem;
+}
+
+
+/* html,body{    height: 100%;} */
+
+.warndetailscontent p,
+.warndetailscontent div {
+	font-size: .8125rem;
+	color: #666;
+}
+
+
+/*.bar{    stroke: none;    fill: steelblue;}*/

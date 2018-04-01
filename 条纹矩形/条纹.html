@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="css/styles.css" />
+		<style type="text/css">
+			.zebra_div {
+				height: 30px;
+				background: blue;
+				border-radius: 20%;
+			}
+		</style>
+	</head>
+
+	<body>
+		<svg class="zebra">
+			<defs>
+				<lineargradient id="bg" x1="0" y1="1%" x2="1" y2="0">
+				</lineargradient>
+			</defs>
+		</svg>
+
+		<!--<div class="zebra_div"></div>-->
+
+		<script src="js/d3.min.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			var svg = d3.select('.zebra');
+			var width = window.innerWidth;
+			var height = width * .6;
+			svg
+				.attr("width", width)
+				.attr("height", height);
+
+			var g_main = svg.append("g").classed("g_main", true);
+			var g_rect = g_main.append("g").classed("g_rect", true)
+				.attr("transform", "translate(0," + height / 2 + ")");
+			var zebra_rect = g_rect.append("rect").classed("zebra_rect", true)
+				.attr("x", 0)
+				.attr("y", 0)
+				.attr("width", 0)
+				.attr("height", width * .03)
+				.attr("rx", width * .03 * .5)
+				.attr("stroke", "gray");
+
+			var bg = svg.select("#bg");
+
+			var duration = 800;
+			var timer_break = 30;
+			var width_show = width;
+			var width_show_tmp = 0;
+
+			var cell_width = Math.ceil(width / 40); //满屏40个
+
+			var interval = setInterval(function() {
+				width_show_tmp += width_show / (duration / timer_break);
+				if(width_show_tmp>width_show){
+					width_show_tmp =width_show;
+				}
+				svg.selectAll("#bg stop").remove();
+				//要精确，不能取整
+				var cell_count = width_show_tmp / cell_width;
+				for(var i = 0; i < cell_count; i++) {
+					bg.append("stop")
+						.attr("offset", i / cell_count)
+						.attr("stop-color", function() {
+							if(i % 2 === 0) {
+								return "#eee";
+							} else {
+								return "#aaa";
+							}
+						});
+					bg.append("stop")
+						.attr("offset", (i + 1) / cell_count)
+						.attr("stop-color", function() {
+							if(i % 2 === 0) {
+								return "#eee";
+							} else {
+								return "#aaa";
+							}
+						});
+				}
+					bg.attr("y1",0.01*width/width_show_tmp);
+					zebra_rect.attr("width", width_show_tmp);
+					zebra_rect.attr("fill", "url(#bg)");
+				if(width_show_tmp >= width_show) {
+					clearInterval(interval);
+				}			
+			}, timer_break);
+
+		</script>
+	</body>
+
+</html>
