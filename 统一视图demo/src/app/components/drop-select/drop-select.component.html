@@ -1,0 +1,8 @@
+<div class="wrapper" (blur)="blur()">
+  <div class="selectedName" (click)="toggleState()">{{data[selected].name}}</div>
+  <div class="list" [hidden]='listhidden' [@listState]="state" (@listState.done)="animationDone($event)" (@listState.start)="animationStart($event)">
+    <div [ngClass]="'list-item'" *ngFor="let item of data;let i = index;" (click)="toggleState(i)">{{item.name}}</div>
+  </div>
+  <div class="cover" [hidden]='listhidden' (click)="blur()"></div>
+</div>
+

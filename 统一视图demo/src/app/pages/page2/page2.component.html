@@ -1,0 +1,38 @@
+<div class="wrapper">
+    <div class="bg_blue">
+        <drop-select  class="select1" (change)="selectChange()" [data]="dropSelectData" [selected]="1"></drop-select>
+        <svg class="pieChart"></svg>
+        <svg class="gridLine"></svg>
+    </div>
+
+    <div class="bg_white">
+        <svg class="barchart">
+            <style>
+                .barchart .grid-line {
+                    stroke: #eee;
+                    shape-rendering: crispEdges;
+                }
+                .barchart .axis text {
+                    font-size: .65rem;
+                }
+                .barchart .x.axis text {
+                    transform: rotate(-28deg);
+                    text-anchor: end !important;
+                }
+                .barchart .x.axis path,
+                .barchart .y.axis path {
+                    display: none;
+                }
+                .barchart .no_display {
+                    display: none;
+                }
+            </style>
+            <defs>
+                <linearGradient id="gradient1" x1="0" y1="0" x2="0" y1="1">
+                    <stop offset="0" stop-color="#fbc86d"></stop>
+                    <stop offset="1" stop-color="#fe7429"></stop>
+                </linearGradient>
+            </defs>
+        </svg>
+    </div>
+</div>
